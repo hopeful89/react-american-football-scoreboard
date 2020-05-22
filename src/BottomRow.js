@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const BottomRow = () => {
+const BottomRow = (props) => {
   const [quarter, quarterState] = useState(1)
+  console.log({props})
 
   function updateQuarter(){
     (quarter >= 4) ? quarterState(1) : quarterState(quarter + 1)
   }
 
-
+  // props.setHomeScore(21); these were for test only passing functions as props of app.js
+  // props.setAwayScore(21)
   return (
     <div className="bottomRow">
       <div className="down">
